@@ -1,114 +1,8 @@
-/* 自定义样式 main.css */ 
+自定义样式 main.css */
 /* 
  1.样式都通过ID限定
  2.尽可能多使用直接子代选择器
  */
-
- /* Bootstrap扩展 */
-.navbar-itcast {
-  background-color: #fff;
-  border-color: #f5f5f5;
-}
-.navbar-itcast .navbar-brand {
-  color: #777;
-  height: 80px;
-}
-.navbar-itcast .navbar-brand:hover,
-.navbar-itcast .navbar-brand:focus {
-  color: #5e5e5e;
-  background-color: transparent;
-}
-.navbar-itcast .navbar-text {
-  color: #777;
-}
-.navbar-itcast .navbar-nav > li > a {
-  color: #777;
-  line-height: 50px;
-  font-size: 14px;
-}
-.navbar-itcast .navbar-nav > li > a:hover,
-.navbar-itcast .navbar-nav > li > a:focus {
-  color: #333;
-  background-color: transparent;
-  border-bottom: 2px solid #E92322;
-}
-.navbar-itcast .navbar-nav > .active > a,
-.navbar-itcast .navbar-nav > .active > a:hover,
-.navbar-itcast .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #fff;
-  border-bottom: 2px solid #E92322;
-}
-.navbar-itcast .navbar-nav > .disabled > a,
-.navbar-itcast .navbar-nav > .disabled > a:hover,
-.navbar-itcast .navbar-nav > .disabled > a:focus {
-  color: #ccc;
-  background-color: transparent;
-}
-.navbar-itcast .navbar-toggle {
-  border-color: #ddd;
-  margin-top: 23px;
-  margin-bottom: 23px;
-}
-.navbar-itcast .navbar-toggle:hover,
-.navbar-itcast .navbar-toggle:focus {
-  background-color: #ddd;
-}
-.navbar-itcast .navbar-toggle .icon-bar {
-  background-color: #888;
-}
-.navbar-itcast .navbar-collapse,
-.navbar-itcast .navbar-form {
-  border-color: #e7e7e7;
-}
-.navbar-itcast .navbar-nav > .open > a,
-.navbar-itcast .navbar-nav > .open > a:hover,
-.navbar-itcast .navbar-nav > .open > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
-}
-@media (max-width: 767px) {
-  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a {
-    color: #777;
-  }
-  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333;
-    background-color: transparent;
-  }
-  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555;
-    background-color: #e7e7e7;
-  }
-  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a,
-  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #ccc;
-    background-color: transparent;
-  }
-}
-.navbar-itcast .navbar-link {
-  color: #777;
-}
-.navbar-itcast .navbar-link:hover {
-  color: #333;
-}
-.navbar-itcast .btn-link {
-  color: #777;
-}
-.navbar-itcast .btn-link:hover,
-.navbar-itcast .btn-link:focus {
-  color: #333;
-}
-.navbar-itcast .btn-link[disabled]:hover,
-fieldset[disabled] .navbar-itcast .btn-link:hover,
-.navbar-itcast .btn-link[disabled]:focus,
-fieldset[disabled] .navbar-itcast .btn-link:focus {
-  color: #ccc;
-}
- /* Bootstrap扩展 */
 
 
 /* 公共样式 */
@@ -139,12 +33,17 @@ body {
 }
 
 .icon-logo::before {
-  content: "\e93e";
+    content: "\e93e";
 }
 
 .icon-icon::before {
-  content: "\e920";
+    content: "\e920";
 }
+
+
+
+
+
 
 
 /* 公共样式 */
@@ -152,9 +51,7 @@ body {
 
 /* 头部区域 */
 
-#header {
-    height: 200px;
-}
+#header {}
 
 #header>.topbar {
     height: 40px;
@@ -163,13 +60,13 @@ body {
 }
 
 #header>.topbar>.container>.row>div {
-	height: 40px;
-	font-size: 12px;
-	color: #888;
+    height: 40px;
+    font-size: 12px;
+    color: #888;
 }
 
 #header>.topbar>.container>.row>div+div {
-	border-left: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
 }
 
 #header .mobile-link {
@@ -200,12 +97,18 @@ body {
     line-height: 50px;
     vertical-align: middle;
 }
+
 #header .icon-logo {
     font-size: 32px;
     color: #555;
     line-height: 50px;
     vertical-align: middle;
 }
+
+
+
+
+
 
 /* #header>.topbar>.container>.row>div {
     height: 40px;
@@ -220,22 +123,186 @@ body {
 /* 头部区域 */
 
 
-/* 测试样区域区域 */
+/* 广告轮播 */
 
-section {
-    height: 200px;
-    background-color: #fff;
+#main_ad {}
+
+#main_ad>.carousel-inner>.item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
-section:nth-of-type(2n) {
-    /* 选择到第1,3,5,7.... */
-    background-color: #f5f5f5;
+
+
+
+
+
+/* 通过媒体查询控制高度 */
+
+@media (min-width: 768px) {
+    #main_ad>.carousel-inner>.item {
+        height: 410px;
+    }
+}
+
+#main_ad>.carousel-inner>.item>img {
+    width: 100%;
 }
 
 
 
 
-/* 测试样区域区域 */
+
+
+/* 广告轮播 */
+
+
+/**
+ * 网站特色
+ */
+
+#tese {
+    padding: 50px 0;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.icon-uniE907:before {
+    content: "\e907";
+}
+
+#tese i {
+    font-size: 34px;
+}
+
+#tese>.container>.row>div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#tese>.container>.row>div>a {
+    color: #888;
+    text-decoration: none;
+}
+
+
+
+
+/* #tese>.container>.row>div{
+  height: 50px;
+  background-color: #f40;
+}
+
+#tese>.container>.row>div:nth-of-type(2n){
+  background-color: #04f;
+} */
+
+
+/**
+ * 网站特色
+ */
+
+
+/**
+ * 立即预约
+ */
+
+#ljyy {
+    border-bottom: 1px solid #c0c0c0;
+    padding: 20px;
+}
+
+#ljyy>.container>p {
+    /* line-height: 50px; */
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#ljyy>.container>p>i {
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+#ljyy>.container>.pull-left>span,
+#ljyy>.container>.pull-left>a {
+    color: #e92322;
+}
+
+#ljyy>.container>.pull-left>a {
+    border-bottom: 1px dashed #e92322;
+}
+
+#ljyy>.container>.pull-left>a:hover {
+    text-decoration: none;
+}
+
+.icon-uniE906:before {
+    content: "\e906";
+}
+
+.icon-uniE905:before {
+    content: "\e905";
+}
+
+
+
+
+
+
+/**
+ * 立即预约
+ */
+
+
+/**
+ * 产品推荐
+ */
+
+#products {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+
+#products>.container>.nav-tabs {}
+
+#products>.container>.nav-tabs>li {}
+
+#products>.container>.nav-tabs>li>a {
+    font-size: 16px;
+    color: #000;
+}
+
+#products>.container>.nav-tabs>li>a:hover {
+    border-color: transparent;
+    background-color: transparent;
+    color: #222;
+}
+
+#products>.container>.nav-tabs>li.active {}
+
+#products>.container>.nav-tabs>li.active>a {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 4px solid #e92322
+}
+
+#products>.container>.tab-content {
+    padding: 20px 0;
+}
+
+#products>.container>.tab-content p {
+    margin-bottom: 0;
+}
+
+#products>.container>.tab-content .panel-heading p strong {
+    font-size: 24px;
+}
+
+
+/**
+ * 产品推荐
+ */
 
 
 /* 脚注区域 */
@@ -248,4 +315,215 @@ section:nth-of-type(2n) {
 
 
 
-/* 脚注区域
+/* 脚注区域 */
+
+
+/* Bootstrap扩展 */
+
+.navbar-itcast {
+    background-color: #fff;
+    border-color: #f5f5f5;
+    margin-bottom: 0;
+}
+
+.navbar-itcast .navbar-brand {
+    color: #777;
+    height: 80px;
+}
+
+.navbar-itcast .navbar-brand:hover,
+.navbar-itcast .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.navbar-itcast .navbar-text {
+    color: #777;
+}
+
+.navbar-itcast .navbar-nav>li>a {
+    color: #777;
+    line-height: 50px;
+    font-size: 14px;
+}
+
+.navbar-itcast .navbar-nav>li>a:hover,
+.navbar-itcast .navbar-nav>li>a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #E92322;
+}
+
+.navbar-itcast .navbar-nav>.active>a,
+.navbar-itcast .navbar-nav>.active>a:hover,
+.navbar-itcast .navbar-nav>.active>a:focus {
+    color: #555;
+    background-color: #fff;
+    border-bottom: 2px solid #E92322;
+}
+
+.navbar-itcast .navbar-nav>.disabled>a,
+.navbar-itcast .navbar-nav>.disabled>a:hover,
+.navbar-itcast .navbar-nav>.disabled>a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.navbar-itcast .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.navbar-itcast .navbar-toggle:hover,
+.navbar-itcast .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.navbar-itcast .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-itcast .navbar-collapse,
+.navbar-itcast .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.navbar-itcast .navbar-nav>.open>a,
+.navbar-itcast .navbar-nav>.open>a:hover,
+.navbar-itcast .navbar-nav>.open>a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+    .navbar-itcast .navbar-nav .open .dropdown-menu>li>a {
+        color: #777;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu>li>a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu>li>a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu>.active>a,
+    .navbar-itcast .navbar-nav .open .dropdown-menu>.active>a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu>.active>a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu>.disabled>a,
+    .navbar-itcast .navbar-nav .open .dropdown-menu>.disabled>a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu>.disabled>a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+
+.navbar-itcast .navbar-link {
+    color: #777;
+}
+
+.navbar-itcast .navbar-link:hover {
+    color: #333;
+}
+
+.navbar-itcast .btn-link {
+    color: #777;
+}
+
+.navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link:focus {
+    color: #333;
+}
+
+.navbar-itcast .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-itcast .btn-link:focus {
+    color: #ccc;
+}
+
+.panel-czbk {
+    border: 0;
+    border-radius: 0;
+    box-shadow: 1px 1px 5px #ccc;
+}
+
+.panel-czbk.active {
+    background-color: #e92322;
+    color: #fff;
+}
+
+.panel-czbk.active::before {
+    font-family: itcast;
+    content: '\e915';
+    font-size: 50px;
+    position: absolute;
+    top: -11px;
+}
+
+.panel-czbk.disabled {
+    background-color: #e0e0e0;
+    color: #555;
+}
+
+.panel-czbk.nostyle {
+    color: #777;
+}
+
+.panel-czbk>.panel-heading {
+    /* color: #333; */
+    /* background-color: #f5f5f5; */
+    /* border-color: #ddd; */
+    float: right;
+    width: 120px;
+    padding: 45px 0;
+    height: 150px;
+    border-left: 1px dashed #c0c0c0;
+    text-align: center;
+    position: relative;
+}
+
+.panel-czbk>.panel-heading::before,
+.panel-czbk>.panel-heading::after {
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    position: absolute;
+}
+
+.panel-czbk>.panel-heading::before {
+    top: -8px;
+    left: -8px;
+}
+
+.panel-czbk>.panel-heading::after {
+    bottom: -8px;
+    left: -8px;
+    box-shadow: 0px 2px 1px #ccc inset;
+}
+
+.panel-czbk>.panel-body {
+    margin-right: 120px;
+    height: 150px;
+}
+
+.panel-czbk>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #ddd;
+}
+
+.panel-czbk>.panel-heading .badge {
+    color: #f5f5f5;
+    background-color: #333;
+}
+
+.panel-czbk>.panel-footer+.panel-collapse>.panel-body {
+    border-bottom-color: #ddd;
+}
+
+
+
+
+/* Bootstrap扩展
