@@ -46,6 +46,7 @@ body {
 
 
 
+
 /* 公共样式 */
 
 
@@ -110,6 +111,7 @@ body {
 
 
 
+
 /* #header>.topbar>.container>.row>div {
     height: 40px;
     background-color: #f40;
@@ -139,6 +141,7 @@ body {
 
 
 
+
 /* 通过媒体查询控制高度 */
 
 @media (min-width: 768px) {
@@ -150,6 +153,7 @@ body {
 #main_ad>.carousel-inner>.item>img {
     width: 100%;
 }
+
 
 
 
@@ -185,6 +189,7 @@ body {
     color: #888;
     text-decoration: none;
 }
+
 
 
 
@@ -250,6 +255,7 @@ body {
 
 
 
+
 /**
  * 立即预约
  */
@@ -264,24 +270,42 @@ body {
     padding: 40px 0;
 }
 
-#products>.container>.nav-tabs {}
 
-#products>.container>.nav-tabs>li {}
+/* 直接这样写pc上也会出现横向滚动条 */
 
-#products>.container>.nav-tabs>li>a {
+
+/* #products>.container>.ul-wapper {
+  overflow-x: scroll;
+}
+ */
+
+
+/* @media (max-width: 768px) {
+  #products>.container>.ul-wapper {
+  overflow-x: scroll;
+  } 
+} */
+
+#products>.container>.ul-wapper>.nav-tabs {
+    padding-left: 20px;
+}
+
+#products>.container>.ul-wapper>.nav-tabs>li {}
+
+#products>.container>.ul-wapper>.nav-tabs>li>a {
     font-size: 16px;
     color: #000;
 }
 
-#products>.container>.nav-tabs>li>a:hover {
+#products>.container>.ul-wapper>.nav-tabs>li>a:hover {
     border-color: transparent;
     background-color: transparent;
     color: #222;
 }
 
-#products>.container>.nav-tabs>li.active {}
+#products>.container>.ul-wapper>.nav-tabs>li.active {}
 
-#products>.container>.nav-tabs>li.active>a {
+#products>.container>.ul-wapper>.nav-tabs>li.active>a {
     background-color: transparent;
     border: 0;
     border-bottom: 4px solid #e92322
@@ -300,10 +324,67 @@ body {
 }
 
 
+
 /**
  * 产品推荐
  */
 
+
+/* 新闻 */
+
+#news {
+    padding: 50px;
+}
+
+#news .news-title {
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px dashed #c0c0c0;
+    position: relative;
+    margin-right: 10px;
+}
+
+#news .news-title::after {
+    content: ' ';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 1px solid #c0c0c0;
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+}
+
+/* #news .nav-pills a i {
+
+} */
+
+.icon-news01:before {
+  content: '\e90e';
+  font-size: 28px;
+  color: #EAEAEA;
+}
+
+.icon-news02:before {
+  content: '\e90f';
+  font-size: 28px;
+  color: #EAEAEA;
+}
+
+.icon-news03:before {
+  content: '\e910';
+  font-size: 28px;
+  color: #EAEAEA;
+}
+
+.icon-news04:before {
+  content: '\e911';
+  font-size: 28px;
+  color: #EAEAEA;
+}
 
 /* 脚注区域 */
 
@@ -311,6 +392,7 @@ body {
     height: 200px;
     background-color: #fff;
 }
+
 
 
 
@@ -505,6 +587,36 @@ fieldset[disabled] .navbar-itcast .btn-link:focus {
     box-shadow: 0px 2px 1px #ccc inset;
 }
 
+.panel-czbk>.panel-heading>.tooltips {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 26px;
+}
+
+.panel-czbk>.panel-heading>.tooltips>a {}
+
+.panel-czbk>.panel-heading .badge {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 2px;
+}
+
+.panel-czbk>.panel-heading .badge-one {
+    color: #e92322;
+    border-color: #e92322;
+}
+
+.panel-czbk>.panel-heading .badge-two {
+    color: #399;
+    border-color: #399;
+}
+
 .panel-czbk>.panel-body {
     margin-right: 120px;
     height: 150px;
@@ -514,14 +626,10 @@ fieldset[disabled] .navbar-itcast .btn-link:focus {
     border-top-color: #ddd;
 }
 
-.panel-czbk>.panel-heading .badge {
-    color: #f5f5f5;
-    background-color: #333;
-}
-
 .panel-czbk>.panel-footer+.panel-collapse>.panel-body {
     border-bottom-color: #ddd;
 }
+
 
 
 
