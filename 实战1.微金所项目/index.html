@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>微金所</title>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
@@ -47,12 +48,17 @@
             </div>
             <div class="col-md-3 text-center">
               <a href="#" class="btn btn-danger btn-sm">免费注册</a>
-              <a href="#" class="btn btn-link btn-sm">登录</a>
+              <!-- <a href="#" class="btn btn-link btn-sm">登录</a> -->
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-target="#login_form">
+                登录
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-itcast navbar-static-top">
+      <!-- data-spy="affix" data-offset-top="60" data-offset-bottom="200"控制导航栏吸顶 -->
+      <nav class="navbar navbar-itcast navbar-static-top" data-spy="affix" data-offset-top="60">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_list" aria-expanded="false">
@@ -423,25 +429,74 @@
     <section id="news">
       <div class="container">
         <div class="row">
-          <div class="col-md-2 col-md-offset-3">
+          <div class="col-sm-2 col-sm-offset-2">
             <div class="news-title">
               全部新闻
             </div>
           </div>
-          <div class="col-md-1">
+          <div class="col-sm-2">
             <ul class="nav nav-pills nav-stacked">
-              <li role="presentation" class="active"><a href="#news01" data-toggle="tab"><i class="icon-news01"></i></a></li>
-              <li role="presentation"><a href="#news02" data-toggle="tab"><i class="icon-news02"></i></a></li>
-              <li role="presentation"><a href="#news03" data-toggle="tab"><i class="icon-news03"></i></a></li>
-              <li role="presentation"><a href="#news04" data-toggle="tab"><i class="icon-news04"></i></a></li>
+              <li role="presentation" class="active"><a data-title="全部新闻" href="#news01" data-toggle="tab" role="tab"><i class="icon-news01"></i></a></li>
+              <li role="presentation"><a data-title="媒体新闻" href="#news02" data-toggle="tab" role="tab"><i class="icon-news02"></i></a></li>
+              <li role="presentation"><a data-title="行业新闻" href="#news03" data-toggle="tab" role="tab"><i class="icon-news03"></i></a></li>
+              <li role="presentation"><a data-title="公司新闻" href="#news04" data-toggle="tab" role="tab"><i class="icon-news04"></i></a></li>
             </ul>
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-6">
              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="news01">1...</div>
-                <div role="tabpanel" class="tab-pane" id="news02">2...</div>
-                <div role="tabpanel" class="tab-pane" id="news03">3...</div>
-                <div role="tabpanel" class="tab-pane" id="news04">4...</div>
+                <div role="tabpanel" class="tab-pane fade in active" id="news01">
+                  <ul>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                    <li>微金所发钱了，快来抢！！！！！！</li>
+                  </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="news02"><ul>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                    <li>微金所发福利了，快来抢！！！！！！</li>
+                  </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="news03"><ul>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                    <li>微金所发代码了，快来抢！！！！！！</li>
+                  </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="news04"><ul>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                    <li>微金所发财了，快来抢！！！！！！</li>
+                  </ul>
+                </div>
               </div>
           </div>
         </div>
@@ -449,11 +504,71 @@
     </section>
     <!-- /新闻列表 -->
     <!-- 合作伙伴 -->
-    <section></section>
+    <section id="hzhb" class="hidden-sm hidden-xs">
+      <div class="container text-center">
+        <h3>合作伙伴</h3>
+        <ul class="center-block">
+          <li><a href="#"><i class="icon-uniE930"></i></a></li>
+          <li><a href="#"><i class="icon-uniE92F"></i></a></li>
+          <li><a href="#"><i class="icon-uniE92E"></i></a></li>
+          <li><a href="#"><i class="icon-uniE92A"></i></a></li>
+          <li><a href="#"><i class="icon-uniE929"></i></a></li>
+          <li><a href="#"><i class="icon-uniE931"></i></a></li>
+          <li><a href="#"><i class="icon-uniE92C"></i></a></li>
+          <li><a href="#"><i class="icon-uniE92B"></i></a></li>
+          <li><a href="#"><i class="icon-uniE92D"></i></a></li>
+        </ul>
+      </div>
+    </section>
     <!-- /合作伙伴 -->
     <!-- 脚注区域 -->
     <footer id="footer"></footer>
     <!-- /脚注区域 -->
+    <!-- Modal -->
+    <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="login_form_title">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="login_form_title">登录</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> -->
     <script src="lib/jquery/jquery.js"></script>

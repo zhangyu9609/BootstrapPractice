@@ -48,6 +48,53 @@ $(function(){
 	});
 	// 此时width等于所有li的宽度总和
 	// 判断当前ul的宽度是否超出屏幕宽度，如果超出就显示横向滚动条
-	if(width > $(window).width())
+	if(width > $(window).width()){
 		$ulContainer.css("width",width).parent().css('overflow-x','scroll');
+	}
+
+	// a点击注册事件
+	var $newsTitle =$('.news-title');
+	$('#news .nav-pills a').on('click',function(){
+		// 获取当前点击元素
+		var $this = $(this);
+		// 获取对应的title值
+		var title = $this.data('title');
+		// 将title设置到相应的位置
+		$newsTitle.text(title);
+	});
+
+	
+	// 1. 获取手指在轮播图上的滑动方向（左右）
+	
+	// 获取界面上的轮播图容器
+	var $carousels = $('.carousel');
+	var startX, endX;
+	var offset = 50;
+	// 注册滑动事件
+	$carousels.on('touchstart', function(e) {
+		// 手指触摸开始时记录一下手指所在的坐标X；
+		// console.log(e.originalEvent.touches[0].clientX);
+		startX = e.originalEvent.touches[0].clientX;
+	});
+	$carousels.on('touchmove', function(e) {
+		// 变量重复赋值
+		endX = e.originalEvent.touches[0].clientX;
+	});
+	$carousels.on('touchend', function(e) {
+		// 结束时一瞬间记录最后的手指所在的坐标X
+		// 比大小
+		// 控制精度
+		// 获取每次运动的距离，当距离大于一定值时认为是有方向变化
+		var distance = Math.abs(startX-endX);
+		if (distance>offset) {
+			// 有方向变化
+			// 2. 根据或得到的方向选择上一张还是下一张
+			// - $('a').click();
+			// - 原生的carousel方法实现
+			// console.log(startX>endX?'left':'right');
+			$(this).carousel(startX>endX?'next':'prev');
+		}
+		
+	});
+	
 });
